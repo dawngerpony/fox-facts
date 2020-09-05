@@ -8,7 +8,7 @@ jobs:
     executor: python/default
     parameters:
       test_results_path:
-        default: ./test-results.xml
+        default: .
         description: path to the JUnit-style test results XML file
         type: string
     steps:
@@ -18,7 +18,7 @@ jobs:
       - python/save-cache
       - run:
           command: |
-            pytest --junitxml=<< parameters.test_results_path >>
+            pytest --junitxml=<< parameters.test_results_path >>/test-results.xml
           name: Test
       - store_test_results:
           path: << parameters.test_results_path >>
