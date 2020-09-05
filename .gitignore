@@ -1,3 +1,5 @@
+.terraform.*
+terraform.*
 *.tfvars
 credentials.json
 test-results.xml
