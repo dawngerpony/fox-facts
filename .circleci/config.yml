@@ -29,4 +29,5 @@ workflows:
     jobs:
       - build
       - terraform/fmt:
-          path: terraform
+          checkout: true
+          path: ./terraform
