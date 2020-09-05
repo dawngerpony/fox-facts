@@ -36,8 +36,3 @@ workflows:
           path: ./terraform
           requires:
             - terraform/fmt
-      - terraform/plan:
-          checkout: true
-          path: ./terraform
-          requires:
-            - terraform/init
