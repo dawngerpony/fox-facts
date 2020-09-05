@@ -1,0 +1,10 @@
+version: '2.0'
+services:
+  lint:
+    image: github/super-linter
+    environment:
+      - RUN_LOCAL=true
+    volumes:
+      - ./fox_facts:/tmp/lint/fox_facts
+      - ./tests:/tmp/lint/tests
+      - ./README.md:/tmp/lint/README.md
