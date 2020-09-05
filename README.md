@@ -8,6 +8,11 @@ Facts about foxes in Python.
     python fox_facts/api.py
     curl http://locahost:5000/api.py
 
+### Running via Docker
+
+    docker-compose run lint
+    docker-compose up api
+
 ## Technologies
 
 Uses:
@@ -16,6 +21,7 @@ Uses:
 - Flask
 - Flask-RESTX
 - CircleCI
+- Terraform
 
 ## Thanks to
 
