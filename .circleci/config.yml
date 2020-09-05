@@ -6,12 +6,22 @@ orbs:
 jobs:
   build:
     executor: python/default
+    parameters:
+      test_results_path:
+        default: ./test-results.xml
+        description: path to the JUnit-style test results XML file
+        type: string
     steps:
       - checkout
       - python/load-cache
       - python/install-deps
       - python/save-cache
-      - python/test
+      - run:
+          command: |
+            pytest --junitxml=<< parameters.test_results_path >>
+          name: Test
+      - store_test_results:
+          path: << parameters.test_results_path >>
 
 workflows:
   main:
