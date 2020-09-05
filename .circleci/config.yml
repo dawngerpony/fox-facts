@@ -31,3 +31,13 @@ workflows:
       - terraform/fmt:
           checkout: true
           path: ./terraform
+      - terraform/init:
+          checkout: true
+          path: ./terraform
+          requires:
+            - terraform/fmt
+      - terraform/plan:
+          checkout: true
+          path: ./terraform
+          requires:
+            - terraform/init
