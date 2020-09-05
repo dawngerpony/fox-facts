@@ -9,16 +9,11 @@ app = Flask(__name__)
 api = Api(app)
 
 
-@app.route('/')
-def hello():
-    """Return a friendly HTTP greeting."""
-    return 'Hello World!'
-
 @api.route("/hello")
 class FoxFacts(Resource):
     """ Main class. """
 
-    _hello = {"hello": "world"}
+    _hello = {"hello": "fox"}
 
     def get(self):
         """ GET method. """
