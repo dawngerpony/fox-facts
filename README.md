@@ -1,6 +1,6 @@
 # fox-facts
 
-Facts about foxes in Python.
+Facts about foxes in Python. Work in progress.
 
 ## How to run locally
 
@@ -10,18 +10,32 @@ Facts about foxes in Python.
 
 ### Running via Docker
 
+Prerequisites: Docker
+
     docker-compose run lint
     docker-compose up api
+
+## Deploying to Google App Engine
+
+Prerequisites: Google Cloud SDK, a GCP account with an active project
+
+    cd fox_facts
+    gcloud app create --project=[YOUR_PROJECT_ID]
+    gcloud app deploy
+    gcloud app browse
+
+For more information, visit [Quickstart for Python 3 in the App Engine Standard Environment](https://cloud.google.com/appengine/docs/standard/python3/quickstart)
 
 ## Technologies
 
 Uses:
 
-- Python
+- Python 3.8
 - Flask
 - Flask-RESTX
 - CircleCI
 - Terraform
+- Google Cloud Platform (specifically Google App Engine)
 
 ## Thanks to
 
