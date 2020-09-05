@@ -6,5 +6,12 @@ services:
       - RUN_LOCAL=true
     volumes:
       - ./fox_facts:/tmp/lint/fox_facts
+      - ./.github/linters/.python-lint:/action/lib/.automation/.python-lint
       - ./tests:/tmp/lint/tests
       - ./README.md:/tmp/lint/README.md
+  api:
+    build: .
+    ports:
+      - 5000:5000
+    volumes:
+      - ./fox_facts:/app/fox_facts
