@@ -1,6 +1,6 @@
 """ Tests for api.py. """
 
-from fox_facts.api import FoxFacts
+from fox_facts.main import FoxFacts
 
 
 def test_hello_should_return_hello_world():

@@ -3,11 +3,16 @@
 from flask import Flask
 from flask_restx import Resource, Api
 
-HOSTNAME = "0.0.0.0"
+HOSTNAME = "127.0.0.1"
 
 app = Flask(__name__)
 api = Api(app)
 
+
+@app.route('/')
+def hello():
+    """Return a friendly HTTP greeting."""
+    return 'Hello World!'
 
 @api.route("/hello")
 class FoxFacts(Resource):
@@ -21,4 +26,4 @@ class FoxFacts(Resource):
 
 
 if __name__ == "__main__":
-    app.run(host=HOSTNAME, debug=True)
+    app.run(host=HOSTNAME, port=8080, debug=True)
