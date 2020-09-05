@@ -21,6 +21,7 @@ Uses:
 - Flask
 - Flask-RESTX
 - CircleCI
+- Terraform
 
 ## Thanks to
 

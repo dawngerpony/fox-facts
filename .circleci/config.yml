@@ -29,4 +29,4 @@ workflows:
     jobs:
       - build
       - terraform/fmt:
-          path: ./terraform
+          path: terraform
