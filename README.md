@@ -4,7 +4,7 @@ Facts about foxes in Python. Work in progress.
 
 ## How to run locally
 
-    pip install -r requirements.txt
+    pip install -r fox_facts/requirements.txt
     python fox_facts/api.py
     curl http://locahost:5000/api.py
 
@@ -14,6 +14,10 @@ Prerequisites: Docker
 
     docker-compose run lint
     docker-compose up api
+
+### Running the tests
+
+    tox
 
 ## Deploying to Google App Engine
 
