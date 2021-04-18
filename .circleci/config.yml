@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   python: circleci/python@0.3.2
-  terraform: circleci/terraform@1.0.1
+  terraform: circleci/terraform@2.0.1
 
 jobs:
   build:
